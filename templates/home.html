@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Smart spending starts here</p>
+    <h1>Make room for what matters.</h1>
+    <p>Build a thoughtful plan around your budget, whether you're refreshing a room, hosting a celebration or finding the finishing touch.</p>
+    <div class="hero-actions">
+      <a class="btn big" href="{{ '/dashboard' if user else '/register' }}">Start planning</a>
+      <a class="btn ghost" href="#planners">Explore planners</a>
+    </div>
+  </div>
+  <figure class="hero-visual">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Sunlit modern living room with warm wood and comfortable furniture">
+  </figure>
+</section>
+<section class="planner-section" id="planners">
+  <div class="section-heading">
+    <div><p class="eyebrow">Made for real life</p><h2>Choose your planner</h2></div>
+    <p>Start with what you're planning. We'll help you shape a practical budget around it.</p>
+  </div>
+  <div class="grid planner-grid">
+    <a class="card" href="/home-planner"><h3>Home planner</h3><p>Balance furniture, lighting and essentials with your style and spend.</p></a>
+    <a class="card" href="/party-planner"><h3>Party planner</h3><p>Give food, decor and entertainment a budget that works together.</p></a>
+    <a class="card" href="/jewelry-planner"><h3>Jewelry planner</h3><p>Match jewelry to your occasion and outfit, with room for your budget.</p></a>
+  </div>
+</section>
+{% endblock %}
